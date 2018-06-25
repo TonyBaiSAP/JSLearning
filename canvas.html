@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<body>
+	<canvas id="c" width="500" height="500"></canvas>
+	<!-- <img src="http://notawebsite.com/image.jpg" /> -->
+	<script type="text/javascript">
+		var c = document.querySelector("#c");
+		var ctx = c.getContext("2d");
+
+		/*var image = new Image();
+
+		image.onload = function() {
+			console.log("Loaded image");
+			ctx.drawImage(image, 0, 0, c.width, c.height);
+			var savedImage = c.toDataURL();
+			window.open(savedImage);
+		}
+		image.src = "Tony.png";*/
+		ctx.fillStyle = "blue";
+		//ctx.fillRect(100, 100, 100, 100);
+		ctx.strokeRect(50, 50, 100, 100);
+		/*ctx.fillRect(0,0,50,50);
+		// Start at (0,0) and clear a 25px x 25px rectangle.
+		ctx.clearRect(0,0,25,25);*/
+
+		ctx.beginPath();
+		ctx.moveTo(75, 75);
+		ctx.lineTo(125, 125);
+		ctx.lineTo(125, 75);
+		//ctx.lineTo(10, 10);
+		ctx.fill();
+		//ctx.translate(20,40);
+		//ctx.stroke();
+		ctx.fillText("Hello World", 10, 10);
+	</script>
+</body>
+</head>
+</html>
